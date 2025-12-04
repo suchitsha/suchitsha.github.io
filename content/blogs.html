@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Blogs - UMA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        /* --- COPY OF YOUR DROPDOWN CSS --- */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 80px;
+        }
+        
+        .dropbtn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            color: #00bcd4;
+        }
+        /* --- BLOG SPECIFIC CSS --- */
+        
+        .blog-post {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-meta {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .blog-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="page-wrapper">
+
+        <header id="header">
+            <h1><a href="index.html">UMA</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Menu</a>
+                        <div class="dropdown-content">
+                            <a href="products.html">Our Products</a>
+                            <a href="blogs.html">Blogs</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="main">
+            <header>
+                <h2>Industry Insights</h2>
+                <p>Latest news on Robotics, Automation, and Industry 4.0</p>
+            </header>
+
+            <section class="wrapper style5">
+                <div class="inner">
+
+                    <div class="blog-post">
+                        <div class="blog-meta">October 24, 2023 | Automation</div>
+                        <h3><a href="#">The Future of Warehouse Logistics</a></h3>
+                        <img src="" alt="Warehouse" class="blog-image">
+                        <p>Automation is no longer a luxury; it is a necessity for modern supply chains. In this article, we explore how autonomous mobile robots are reducing lead times and improving safety standards across the globe...</p>
+                        <a href="#" class="button primary small">Read Full Story</a>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="blog-meta">September 10, 2023 | Technology</div>
+                        <h3><a href="#">n</a></h3>
+                        <p> Unlike traditional AGVs that require magnetic strips, SLAM allows robots to navigate freely in dynamic environments...</p>
+                        <a href="#" class="button primary small">Read Full Story</a>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="blog-meta">August 05, 2023 | Company News</div>
+                        <h3>
+                            <a href="#">blog</a>
+                        </h3>
+                        <p>Content for blog</p>
+                        <a href="#" class="button primary small">Read Full Story</a>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+
+        <footer id="footer">
+            <p>Contact: suchit@umarobotics.com</p>
+            <ul class="copyright">
+                <li>&copy; 2018 UmaRobotics</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

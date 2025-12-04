@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Our Products - UMA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        /* --- DropdOwn CSS --- */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 80px;
+        }
+        
+        .dropbtn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            color: #00bcd4;
+        }
+        /* --- PRODUCT GRID CSS --- */
+        
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .product-card {
+            background: #f7f7f7;
+            /* Light grey background */
+            border-radius: 4px;
+            width: 300px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            /* Slight lift on hover */
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 {
+            color: #2e3842;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="page-wrapper">
+
+        <header id="header">
+            <h1><a href="index2.html">UMA</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Menu</a>
+                        <div class="dropdown-content">
+                            <a href="products.html">Our Products</a>
+                            <a href="blogs.html">Blogs</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="main">
+            <header>
+                <h2>Our Products</h2>
+                <p>Innovative robotics and IoT solutions for modern logistics</p>
+            </header>
+
+            <section class="wrapper style5">
+                <div class="inner">
+
+                    <h3>Industrial Solutions</h3>
+                    <p>Industry 4.0 marks the shift from manual effort to intelligent efficiency—automation and digitalization are the engines of modern productivity. Automation and digitalization drive faster production, smarter material use, superior quality,
+                        safer workspaces, and leaner operations—all with less labor and shorter lead times.
+                    </p>
+
+                    <div class="product-grid">
+
+                        <div class="product-card">
+                            <img src="images/image4.png" alt="Autonomous Robot">
+                            <h3>Autonomous Robots</h3>
+                            <p>Heavy duty autonomous mobile robot capable of lifting 450kg payloads.</p>
+                            <a href="#" class="button small">View Specs</a>
+
+                        </div>
+
+                        <div class="product-card">
+                            <img src="images/image5.jpg" alt="Fleet Software">
+                            <h3>Person Following Robots</h3>
+                            <p>Person Followig robot content</p>
+                            <a href="#" class="button small">View Specs</a>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="images/image1.jpg" alt="Robotic Arm">
+                            <h3>Line Following Robot</h3>
+                            <p>.</p>
+                            <a href="#" class="button small">View Specs</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <hr />
+
+                <h3>Why UMA?</h3>
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <div class="feature-box">
+                            <h4>Customized Intelligence</h4>
+                            <p>Handles heavy totes and boxes from conveyors and shelves up to 200 cm. Transports payloads from warehouse to assembly line with precision.</p>
+                        </div>
+                        <div class="feature-box">
+                            <h4>Adaptive Robotics</h4>
+                            <p>Rapid deployment in changing warehouse layouts and workflows. Built for flexibility in dynamic industrial environments.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <div class="feature-box">
+                            <h4>Human-Interactive Control</h4>
+                            <p>Workers can assign tasks and update locations on the go. Robots respond instantly to human instructions—no coding needed.</p>
+                        </div>
+                        <div class="feature-box">
+                            <h4>Innovation at the Core</h4>
+                            <p>Autonomous navigation in cluttered, unpredictable spaces. Smart manipulators grip varied tote sizes from diverse pick points.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <hr /><br />
+
+                <div style="text-align:center;">
+                    <h3>Innovative Solutions Driving Optimization 4.0</h3>
+                    <p>Our robotic system automates heavy tote and box handling—cutting costs and boosting efficiency in warehouses and production lines. Designed for seamless human-robot collaboration, it thrives in complex, dynamic environments.</p>
+                </div>
+
+                <div class="opt-grid">
+                    <div class="opt-card">
+                        <strong>🔄 Flexibility</strong> Adapts instantly to shifting warehouse layouts and evolving pick/place locations.
+                    </div>
+                    <div class="opt-card">
+                        <strong>🤖 Intelligent Manipulation</strong> Autonomously detects box types and applies smart grasping strategies for reliable handling.
+                    </div>
+                    <div class="opt-card">
+                        <strong>🛡️ Injury Prevention</strong> Takes over heavy lifting tasks—protecting workers from strain and workplace injuries.
+                    </div>
+                    <div class="opt-card">
+                        <strong>⚡ Rapid Integration</strong> Deploys quickly with minimal infrastructure changes—ready to work within hours.
+                    </div>
+                    <div class="opt-card">
+                        <strong>🔁 Beyond Repetition</strong> Unlike traditional robots, ours adapt to changing tasks and environments with robust strategies.
+                    </div>
+                    <div class="opt-card">
+                        <strong>⏱️ 24x7 Optimization</strong> Operates continuously—cutting costs and boosting productivity around the clock.
+                    </div>
+                </div>
+
+    </div>
+    </section>
+    </article>
+
+    <footer id="footer">
+        <p>Contact: suchit@umarobotics.com</p>
+        <ul class="copyright">
+            <li>&copy; 2018 UmaRobotics</li>
+        </ul>
+    </footer>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
