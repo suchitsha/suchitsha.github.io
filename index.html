@@ -5,246 +5,215 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Uma</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="landing">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+    <title>UMA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Uma</a></h1>
-						<nav id="nav">
-							<ul>
-								<!-- TODO li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li-->
-							</ul>
-						</nav>
-					</header>
+    <!-- Dropdown Menu Styling -->
+    <style>
+        /* Dropdown Menu Styling */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 80px;
+        }
+        
+        .dropbtn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+        /* Show dropdown on hover */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Optional: change button color on hover */
+        
+        .dropdown:hover .dropbtn {
+            color: #00bcd4;
+        }
+    </style>
+</head>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Uma</h2>
-							<p>Sustainable logistics, automation and IOT solutions<br />
-							<br /><br /><br /><br />
-							</p>
-							<!--ul class="actions">
-								<li><a href="#" class="button special">Activate</a></li>
-							</ul-->
-						</div>
-                        
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+<body class="landing">
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-                                <h2>Industry 4.0 : Automation, digitalization is way to productivity</h2>
-                                <p> Automation and digitalization leads to higher production rates and increased productivity, more efficient use of materials, better product quality, improved safety, shorter workweeks for labour, and reduced factory lead times.
-								</p>
-							</header>
-							<ul class="icons major">
-								<!--<li><span class="fa fa-gears" style="font-size:48px"><span class="label"></span></span></li>
-								<li><span class="fa fa-leaf" style="font-size:48px"><span class="label"></span></span></li>
-								<li><span class="fa fa-bug" style="font-size:48px"><span class="label"></span></span></li> -->
-								<li><span class="label"><img src="images/industry4.jpg" alt="" /></span></li>
-							</ul>
-						</div>
-					</section>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-				<!-- Two a)-->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Customized Intelligence</h2>
-								<p>Our robot can handle heavy totes and boxes of different sizes from conveyors, shelves of different heights upto 200cm. Transporting from warehouse to assembly line.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Adaptive robots for flexible warehouse</h2>
-								<p> We focus on fast deployment solutions that offer flexibility in changing environments and warehouse layouts. </p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Interactive</h2>
-								<p>Robots will take instructions from the workers for tasks and location changes.</p>
-							</div>
-						</section>
-                        <section class="spotlight">
-                            <div class="image"><img src="images/pic4.jpg" alt="" /></div><div class="content">
-                                <h2>Innovation</h2>
-                                <p>State of the art autonomous navigation for cluterred environment. Novel manipulators to handle different sizes of totes and boxes from different pick and place location.</p>
-                            </div>
-                        </section>
-					</section>
-                    
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1>
+                <a href="index.html">UMA</a>
+            </h1>
+            <nav id="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Menu</a>
+                        <div class="dropdown-content">
+                            <a href="content/products.html">Our Products</a>
+                            <a href="content/blogs.html">Blogs</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Innovative solutions enabling Optimization 4.0</h2>
-								<p>Our robotic solution will help warehouses and production industries to optimize costs by performing heavy box and totes handeling tasks that were mostly done by humans until now.<br />
-                                    Solutions optimized to work along with humans in complex environments.
-								</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane-o">
-									<h3>Flexibilty</h3>
-									<p>Adaptive to changing warehouse layouts and pick/place locations.</p>
-								</li>
-								<li class="icon fa-laptop">
-									<h3>Manipulation</h3>
-									<p>Autonomous detection of boxes and grasping stratergies for manipulation.</p>
-								</li>
-								<li class="icon fa-code">
-                                    <h3>Avoid injuries</h3>
-                                    <p>Robots handle heavy totes and box lifting tasks and save manual workers from injuries.</p>
-								</li>
-								<li class="icon fa-headphones">
-									<h3>Integration time</h3>
-									<p>Fast integration and minimal change to infrastructure of the warehouse for deployment.</p>
-								</li>
-								<li class="icon fa-heart-o">
-									<h3>More than repetition</h3>
-                                    <p>Unlike tradition robots, robust stratergies for changing environments and tasks.</p>
-								</li>
-								<li class="icon fa-flag-o">
-									<h3>24x7 optimization</h3>
-									<p>Round the clock execution of tasks and reduced costs.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <h2>UMA</h2>
+                <p>Sustainable logistics, automation and IOT solutions<br /><br /><br /><br /></p>
+            </div>
 
-                    
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<section class="inner">
-								<div class="content">
-									<h2>Team</h2>
-									<p>UMA Team comes with 20+ Years cumulative experience in Machine Learning & Software Development and robotics.
-										<br /><br />
-										Suchit Sharma - Expert in machine learning and robotics. He has made two mobile robots with indoor and outdoor autonomous navigation. He has 10 years
-										of combined experience in robotics and machine learning, IOT, rapid prototyping,  hardware hacking and software development.  Well connected with researched institutes and robotics community.
-										He did his master thesis at DLR, German Aerospace Agency in Munich.
-										<br /><br />
-									</p>
-								</div>
-								<div class="image">
-									<img src="images/logo.png" alt="logo" style="width:100%;height:65%;border-radius:50%" />
-								</div>
-							</section>
-					</section>
+            <a href="#one" class="more scrolly">Learn More</a>
+        </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<!--ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						</ul-->
-                        
-                        <!-- for encoded email "mailto:email" or below is email  "&#x73;&#x75;&#x63;&#x68;&#x69;&#x74;&#x73;&#x68;&#x61;&#x72;&#x6D;&#x61;&#x5F;&#x32;&#x30;&#x30;&#x37;&#x40;&#x79;&#x61;&#x68;&#x6F;&#x6F;&#x2E;&#x63;&#x6F;&#x2E;&#x69;&#x6E;"
-                         -->
-                        <!--section>
-                            <h4>Form</h4>
-                            <form method="post" action="&#x73;&#x75;&#x63;&#x68;&#x69;&#x74;&#x73;&#x68;&#x61;&#x72;&#x6D;&#x61;&#x5F;&#x32;&#x30;&#x30;&#x37;&#x40;&#x79;&#x61;&#x68;&#x6F;&#x6F;&#x2E;&#x63;&#x6F;&#x2E;&#x69;&#x6E;">
-                                
-                                <div class="row uniform">
-                                    <div class="6u 12u$(xsmall)">
-                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-                                    </div>
-                                    <div class="6u$ 12u$(xsmall)">
-                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                                    </div>
-                                    <div class="12u$">
-                                     <div class="select-wrapper">
-                                     <select name="demo-category" id="demo-category">
-                                     <option value="">- Category -</option>
-                                     <option value="1">Manufacturing</option>
-                                     <option value="1">Shipping</option>
-                                     <option value="1">Administration</option>
-                                     <option value="1">Human Resources</option>
-                                     </select>
-                                     </div>
-                                     </div>
-                                    <div class="4u 12u$(small)">
-                                     <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                     <label for="demo-priority-low">Low</label>
-                                     </div>
-                                     <div class="4u 12u$(small)">
-                                     <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                     <label for="demo-priority-normal">Normal</label>
-                                     </div>
-                                     <div class="4u$ 12u$(small)">
-                                     <input type="radio" id="demo-priority-high" name="demo-priority">
-                                     <label for="demo-priority-high">High</label>
-                                     </div>
-                                    <div class="6u 12u$(small)">
-                                        <input type="checkbox" id="demo-copy" name="demo-copy">
-                                            <label for="demo-copy">Email me a copy</label>
-                                            </div>
-                                    <div class="6u$ 12u$(small)">
-                                        <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                            <label for="demo-human">Not a robot</label>
-                                            </div>
-                                    <div class="12u$">
-                                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                                    </div>
-                                    <div class="12u$">
-                                        <ul class="actions">
-                                            <li><input type="submit" value="Send Message" class="special" /></li>
-                                            <li><input type="reset" value="Reset" /></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </form>
-                        </section
-                        <p>Contact: &#x73;&#x75;&#x63;&#x68;&#x69;&#x74;&#x73;&#x68;&#x61;&#x72;&#x6D;&#x61;&#x5F;&#x32;&#x30;&#x30;&#x37; {{ at }} &#x79;&#x61;&#x68;&#x6F;&#x6F;&#x2E;&#x63;&#x6F;&#x2E;&#x69;&#x6E;</p>
-						-->
-						<p>Contact: suchit@umarobotics.com <br>
-						 </p>
-						<ul class="copyright">
-                            
-							<li>&copy; 2018 UmaRobotics</li><!--li>Design: <a href="">HTML5 UP</a></li-->
-						</ul>
-					</footer>
+        <!-- One -->
+        <section id="one" class="wrapper style1 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Industry 4.0 : Automation, digitalization is way to productivity</h2>
+                    <p>Automation and digitalization lead to higher production rates, more efficient material use, better product quality, improved safety, and reduced lead times.</p>
+                </header>
+                <ul class="icons major">
+                    <li><span class="label"><img src="images/industry4.jpg" alt="" /></span></li>
+                </ul>
+            </div>
+        </section>
 
-			</div>
+        <!-- Two -->
+        <section id="two" class="wrapper alt style2">
+            <section class="spotlight">
+                <div class="image"><img src="images/pic01.jpg" alt="" /></div>
+                <div class="content">
+                    <h2>Customized Intelligence</h2>
+                    <p>Our robot can handle heavy totes and boxes of different sizes from conveyors, shelves of different heights upto 200cm. Transporting from warehouse to assembly line.</p>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div class="image"><img src="images/pic02.jpg" alt="" /></div>
+                <div class="content">
+                    <h2>Adaptive robots for flexible warehouse</h2>
+                    <p>We focus on fast deployment solutions that offer flexibility in changing environments and warehouse layouts.</p>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div class="image"><img src="images/pic03.jpg" alt="" /></div>
+                <div class="content">
+                    <h2>Interactive</h2>
+                    <p>Robots will take instructions from the workers for tasks and location changes.</p>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div class="image"><img src="images/pic4.jpg" alt="" /></div>
+                <div class="content">
+                    <h2>Innovation</h2>
+                    <p>State-of-the-art autonomous navigation in cluttered environments and novel manipulators for handling various tote and box sizes.</p>
+                </div>
+            </section>
+        </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+        <!-- Three -->
+        <section id="three" class="wrapper style3 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Innovative solutions enabling Optimization 4.0</h2>
+                    <p>Our robotic solution will help warehouses and production industries to optimize costs by performing heavy box and totes handeling tasks that were mostly done by humans until now.<br /> Solutions optimized to work along with humans
+                        in complex environments.</p>
+                </header>
+                <ul class="features">
+                    <li class="icon fa-paper-plane-o">
+                        <h3>Flexibility</h3>
+                        <p>Adaptive to changing warehouse layouts and pick/place locations.</p>
+                    </li>
+                    <li class="icon fa-laptop">
+                        <h3>Manipulation</h3>
+                        <p>Autonomous detection of boxes and grasping stratergies for manipulation.</p>
+                    </li>
+                    <li class="icon fa-code">
+                        <h3>Avoid Injuries</h3>
+                        <p>Robots handle heavy totes and box lifting tasks and save manual workers from injuries.</p>
+                    </li>
+                    <li class="icon fa-headphones">
+                        <h3>Integration Time</h3>
+                        <p>Fast integration and minimal change to infrastructure of the warehouse for deployment.</p>
+                    </li>
+                    <li class="icon fa-heart-o">
+                        <h3>More than Repetition</h3>
+                        <p>Unlike tradition robots, robust stratergies for changing environments and tasks.</p>
+                    </li>
+                    <li class="icon fa-flag-o">
+                        <h3>24x7 Optimization</h3>
+                        <p>Round the clock execution of tasks and reduced costs.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-	</body>
+        <!-- CTA -->
+        <section id="cta" class="wrapper style4">
+            <section class="inner">
+                <div class="content">
+                    <h2>Team</h2>
+                    <p>We have a Team of eight people. Our founder Suchit Sharma is a robotic software engineer. We employed one hardware engineer Daya Shankar Chaturvedi, one operational developer Sandeep Kumar, one software developer Navin Pal and one
+                        business developer Malin Stiller and some labourers. Founder, CEO. 10+ years of combined experience in robotics and machine learning, IOT, rapid prototyping, hardware hacking and software development. Work experience in India and
+                        Germany from corporate to startups. Well connected with researched institutes and robotics community in Germany as well. All Team members are working Fulltime in the company.
+
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="images/logo.png" alt="logo" style="width:100%;height:65%;border-radius:50%" />
+                </div>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Contact: suchit@umarobotics.com</p>
+            <ul class="copyright">
+                <li>&copy; 2018 UmaRobotics</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
