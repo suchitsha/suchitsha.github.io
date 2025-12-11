@@ -60,6 +60,9 @@
             flex-wrap: wrap;
             gap: 2rem;
             justify-content: center;
+            /*change start*/
+            align-items: stretch;
+            /*change end*/
             margin-top: 2rem;
         }
         
@@ -72,6 +75,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.2s;
+            /* FLEXBOX MAGIC STARTS HERE */
+            display: flex;
+            flex-direction: column;
+            /* Stack elements top to bottom */
+            height: auto;
+            /* Let it grow as */
         }
         
         .product-card:hover {
@@ -81,7 +90,7 @@
         
         .product-card img {
             width: 100%;
-            height: auto;
+            height: 200px;
             border-radius: 4px;
             margin-bottom: 1rem;
         }
@@ -94,6 +103,15 @@
         .product-card p {
             color: #666;
             font-size: 0.9rem;
+        }
+        
+        .product-card .button {
+            margin-top: auto;
+            /* This pushes the button to the very bottom */
+            align-self: center;
+            /* Centers the button horizontally */
+            width: 100%;
+            /* Optional: Makes buttons same width */
         }
     </style>
 </head>
@@ -136,59 +154,79 @@
                         <div class="product-card">
                             <img src="../content/images/image4.png" alt="Autonomous Robot">
                             <h3>Autonomous Robots</h3>
-                            <p></p>
+                            <!-- <p></p> -->
                             <a href="../content/autonomous.html" class="button small">View Specs</a>
 
                         </div>
 
                         <div class="product-card">
-                            <img src="../content/images/outd1.png" alt="Software">
+                            <img src="../content/images/outd2.jpg" alt="Software">
                             <h3>Uma Outdoor 4X4</h3>
-                            <p></p>
+                            <!-- <p></p> -->
                             <a href="../content/uma_outdoor.html" class="button">View Specs</a>
                         </div>
 
                         <div class="product-card">
                             <img src="../content/images/HDS1.png" alt="Robotic">
                             <h3> UMA Pedestrian Alert System for Forklifts</h3>
-                            <p>.</p>
+                            <!-- <p>.</p> -->
                             <a href="../content/HDS.html" class="button small">View Specs</a>
                         </div>
 
                         <div class="product-card">
-                            <img src="../content/images/Mini1.png" alt="Robotic">
+                            <img src="../content/images/mini1.png" alt="Robotic">
                             <h3>UMA Under Chassis Inspection Robot</h3>
-                            <p>.</p>
+                            <!-- <p>.</p> -->
                             <a href="../content/mini_robot.html" class="button">View Specs</a>
                         </div>
 
                         <div class="product-card">
                             <img src="../content/images/scorpion1.jpg" alt="Robotic">
                             <h3>UMA Scorpion</h3>
-                            <p></p>
+                            <!-- <p></p> -->
                             <a href="../content/Uma_Scorpion.html" class="button">View Specs</a>
                         </div>
 
                         <div class="product-card">
                             <img src="../content/images/UGV1.jpg" alt="Robotic">
                             <h3> UMA Off Road Unmanned Ground Vehicle</h3>
-                            <p></p>
-                            <a href="../content/Uma_Scorpion.html" class="button">View Specs</a>
+                            <!-- <p></p> -->
+                            <a href="../content/offroad_ugv.html" class="button">View Specs</a>
                         </div>
 
                         <div class="product-card">
                             <img src="../content/images/rail1.png" alt="Robotic">
                             <h3> UMA Rail Guided material handling robot</h3>
-                            <p></p>
+                            <!-- <p></p> -->
                             <a href="../content/rail_guided.html" class="button">View Specs</a>
                         </div>
 
                         <div class="product-card">
-                            <img src="../content/images/track6.jpg" alt="Robotic">
+                            <img src="../content/images/track6_1.jpg" alt="Robotic">
                             <h3> UMA Track based 6 Ton Automated Guided Vehicle</h3>
-                            <p></p>
+                            <!-- <p></p> -->
                             <a href="../content/rail_guided.html" class="button">View Specs</a>
                         </div>
+
+                        <div class="product-card">
+                            <img src="../content/images/offroad.jpg" alt="Robotic">
+                            <h3>UMA Off Road robotic Vehicle</h3>
+                            <!-- <p></p> -->
+                            <a href="../content/off_road_robot.html" class="button">View Specs</a>
+                        </div>
+                        <div class="product-card">
+                            <img src="../content/images/agv1.jpg" alt="Robotic">
+                            <h3>UMA Automated Guided Vehicle</h3>
+                            <!-- <p></p> -->
+                            <a href="../content/ugv.html" class="button">View Specs</a>
+                        </div>
+                        <div class="product-card">
+                            <img src="../content/images/.jpg" alt="Robotic">
+                            <h3>UMA AI based Forklift Collision Avoidance System</h3>
+                            <!-- <p></p> -->
+                            <a href="../content/ugv.html" class="button">View Specs</a>
+                        </div>
+
 
                     </div>
 
@@ -197,7 +235,7 @@
 
                 <hr />
 
-                <h3>Why UMA?</h3>
+                <!-- <h3>Why UMA?</h3>
                 <div class="row">
                     <div class="col-6 col-12-medium">
                         <div class="feature-box">
@@ -248,7 +286,7 @@
                     <div class="opt-card">
                         <strong>⏱️ 24x7 Optimization</strong> Operates continuously—cutting costs and boosting productivity around the clock.
                     </div>
-                </div>
+                </div> -->
 
     </div>
     </section>
@@ -273,4 +311,3 @@
 </body>
 
 </html>
-
