@@ -15,7 +15,8 @@
     <!-- Dropdown Menu Styling -->
     <style>
         /* Dropdown Menu Styling */
-		 html,
+        
+        html,
         body {
             overflow-x: hidden;
             /* This strictly prevents sideways scrolling */
@@ -66,6 +67,44 @@
         
         .dropdown:hover .dropbtn {
             color: #00bcd4;
+        }
+        
+        .roi-floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #00bcd4;
+            color: #000;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            z-index: 999;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        /* Hover effect */
+        
+        .roi-floating-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+        }
+        /* Subtle attention animation */
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .roi-floating-btn {
+            animation: pulse 2s infinite;
         }
     </style>
 </head>
@@ -185,7 +224,7 @@
             </div>
         </section>
 
-		<section id="awards" class="wrapper style5 special">
+        <section id="awards" class="wrapper style5 special">
             <div class="inner">
                 <header class="major">
                     <h2>Awards & Achievements</h2>
@@ -217,7 +256,7 @@
             </div>
         </section>
 
-		<section id="trusted-by" class="wrapper style1 special">
+        <section id="trusted-by" class="wrapper style1 special">
             <div class="inner">
                 <header class="major">
                     <h2>Trusted By</h2>
@@ -255,8 +294,8 @@
             <section class="inner">
                 <div class="content">
                     <h2>Team</h2>
-                    <p>We have a Team of eight people. Having 10+ years of combined experience in robotics and machine learning, IOT, rapid prototyping, hardware hacking and software development. Work experience in India and
-                        Germany from corporate to startups.We are Well connected with researched institutes and robotics community in Germany as well. All Team members are working Fulltime in the company.
+                    <p>We have a Team of eight people. Having 10+ years of combined experience in robotics and machine learning, IOT, rapid prototyping, hardware hacking and software development. Work experience in India and Germany from corporate to startups.We
+                        are Well connected with researched institutes and robotics community in Germany as well. All Team members are working Fulltime in the company.
 
                     </p>
                 </div>
@@ -268,8 +307,8 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p>Email: umarobotics7(at)gmail(dot)com <br>
-            Contact:9084088838</p>
+            <p>Email: umarobotics7(at)gmail(dot)com <br> Contact:9084088838
+            </p>
             <ul class="copyright">
                 <li>&copy; 2018 UmaRobotics</li>
             </ul>
@@ -285,9 +324,10 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <a href="content/roi.html" class="roi-floating-btn">
+    Check Savings
+</a>
+
 </body>
 
 </html>
-
-
-
