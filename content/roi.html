@@ -29,6 +29,26 @@
             font-size: 0.8rem;
             opacity: 0.7;
         }
+        /* Fix for mobile "mashing" */
+        
+        @media screen and (max-width: 736px) {
+            .roi-big {
+                font-size: 1.8rem !important;
+                /* Shrinks the text so the range fits */
+                line-height: 1.2;
+                margin-bottom: 1.5rem;
+                /* Adds breathing room between the two result blocks */
+            }
+            .roi-label {
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                margin-bottom: 0.5rem;
+            }
+            .roi-result {
+                padding: 2rem 1rem !important;
+                /* Prevents text from touching the edges */
+            }
+        }
     </style>
 </head>
 
