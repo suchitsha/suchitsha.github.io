@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>UMA - Request Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <style>
+        .form-box {
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        input,
+        textarea {
+            background: #1d242a !important;
+            color: #fff !important;
+            border: 1px solid #444 !important;
+        }
+        
+        #successMessage {
+            display: none;
+            color: #00bcd4;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="../index.html">UMA</a></h1>
+        </header>
+
+        <!-- Title -->
+        <section class="wrapper style1 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Request Detailed Report</h2>
+                    <p>Get a customized efficiency and savings analysis for your operations</p>
+                </header>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="wrapper style2">
+            <div class="inner form-box">
+
+                <!-- Hidden iframe -->
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+                <!-- FORM -->
+                <form action="https://formsubmit.co/umarobotics7@gmail.com" method="POST" target="hidden_iframe" onsubmit="handleSubmit()">
+
+                    <!-- Hidden configs -->
+                    <input type="hidden" name="_subject" value="New ROI Report Request">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse" value="Thanks! Our team will contact you shortly with your detailed ROI report.">
+
+                    <div class="row gtr-uniform">
+
+                        <div class="col-12">
+                            <label>Your Email</label>
+                            <input type="email" name="email" placeholder="example@company.com" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label>Company Name</label>
+                            <input type="text" name="company">
+                        </div>
+
+                        <div class="col-12">
+                            <label>Message (optional)</label>
+                            <textarea name="message" rows="4"></textarea>
+                        </div>
+
+                    </div>
+
+                    <ul class="actions" style="margin-top:2rem;">
+                        <li>
+                            <button type="submit" class="button primary">
+                                Submit Request
+                            </button>
+                        </li>
+                    </ul>
+
+                </form>
+
+                <!-- Success Message -->
+                <p id="successMessage">
+                    ✅ Request sent successfully! Our team will contact you soon.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Email: umarobotics7(at)gmail(dot)com</p>
+        </footer>
+
+    </div>
+
+    <!-- Script -->
+    <script>
+        function handleSubmit() {
+            setTimeout(() => {
+                document.getElementById("successMessage").style.display = "block";
+                document.querySelector("form").reset();
+            }, 500);
+        }
+    </script>
+
+</body>
+
+</html>
