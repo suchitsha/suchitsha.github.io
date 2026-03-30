@@ -1,0 +1,573 @@
+<!-- <!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>UMA - Request Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        .form-box {
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        input,
+        textarea {
+            background: #1d242a !important;
+            color: #fff !important;
+            border: 1px solid #444 !important;
+        }
+        
+        #successMessage {
+            display: none;
+            color: #00bcd4;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <header id="header">
+            <h1><a href="../index.html">UMA</a></h1>
+        </header>
+        <section class="wrapper style1 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Request Detailed Report</h2>
+                </header>
+            </div>
+        </section>
+        <section class="wrapper style2">
+            <div class="inner form-box">
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+                <form action="https://formsubmit.co/umarobotics7@gmail.com" method="POST" target="hidden_iframe" onsubmit="return handleSubmit()">
+                    <input type="hidden" id="hidden_salary" name="salary">
+                    <input type="hidden" id="hidden_shifts" name="shifts">
+                    <input type="hidden" id="hidden_workers" name="workers">
+                    <input type="hidden" id="hidden_savings" name="savings">
+                    <input type="hidden" id="hidden_payback" name="payback">
+
+                    <div class="row gtr-uniform">
+                        <div class="col-12"><label>Your Email</label><input type="email" name="email" required></div>
+                        <div class="col-12"><label>Company Name</label><input type="text" name="company" id="company_field" required></div>
+                        <div class="col-12"><label>Message (optional)</label><textarea name="message" rows="4"></textarea></div>
+                    </div>
+                    <ul class="actions" style="margin-top:2rem;">
+                        <li><button type="submit" class="button primary">Submit Request</button></li>
+                    </ul>
+                </form>
+                <p id="successMessage">✅ Request sent! PDF downloading...</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("hidden_salary").value = params.get('salary') || "0";
+            document.getElementById("hidden_shifts").value = params.get('shifts') || "0";
+            document.getElementById("hidden_workers").value = params.get('workers') || "0";
+            document.getElementById("hidden_savings").value = params.get('savings') || "0";
+            document.getElementById("hidden_payback").value = params.get('payback') || "0";
+        };
+
+        function handleSubmit() {
+            generatePDF();
+            setTimeout(() => {
+                document.getElementById("successMessage").style.display = "block";
+                document.querySelector("form").reset();
+            }, 1000);
+            return true;
+        }
+
+        function generatePDF() {
+            const {
+                jsPDF
+            } = window.jspdf;
+            const doc = new jsPDF();
+
+            const company = document.getElementById("company_field").value || "Client";
+            const salary = document.getElementById("hidden_salary").value;
+            const shifts = document.getElementById("hidden_shifts").value;
+            const workers = document.getElementById("hidden_workers").value;
+            const savings = document.getElementById("hidden_savings").value;
+            const payback = document.getElementById("hidden_payback").value;
+
+            // Simple Header
+            doc.setFontSize(22);
+            doc.setTextColor(0, 188, 212);
+            doc.text("UMA ROI REPORT", 20, 20);
+
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+            doc.text(`Company: ${company}`, 20, 40);
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 20, 48);
+
+            // Parameters Section
+            doc.text("Parameters:", 20, 65);
+            doc.text(`- Monthly Salary: ${salary}`, 25, 73);
+            doc.text(`- Number of Shifts: ${shifts}`, 25, 81);
+            doc.text(`- Number of Workers: ${workers}`, 25, 89);
+
+            // Projections Section
+            doc.text("Projections:", 20, 105);
+            doc.text(`- Annual Savings: ${savings}`, 25, 113);
+            doc.text(`- Payback Period: ${payback}`, 25, 121);
+
+            // 5 Year Savings Table
+            const sNum = parseFloat(salary) || 0;
+            const shNum = parseFloat(shifts) || 0;
+            const wNum = parseFloat(workers) || 0;
+            const annualSavings = (sNum * shNum * wNum * 12) * 0.825; // Midpoint 
+
+            let cumulative = 0;
+            const rows = [];
+            for (let i = 1; i <= 5; i++) {
+                cumulative += annualSavings;
+                rows.push([`Year ${i}`, `INR ${Math.round(annualSavings).toLocaleString()}`, `INR ${Math.round(cumulative).toLocaleString()}`]);
+            }
+
+            doc.autoTable({
+                startY: 135,
+                head: [
+                    ['Year', 'Annual Savings', 'Cumulative Savings']
+                ],
+                body: rows,
+                headStyles: {
+                    fillColor: [0, 188, 122]
+                }
+            });
+
+            doc.save(`UMA_Report_${company}.pdf`);
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!--this code below can be uploaded after checking the mail functionality report checked-->
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>UMA - Request Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        .form-box {
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        input,
+        textarea {
+            background: #1d242a !important;
+            color: #fff !important;
+            border: 1px solid #444 !important;
+        }
+        
+        #successMessage {
+            display: none;
+            color: #00bcd4;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <header id="header">
+            <h1><a href="../index.html">UMA</a></h1>
+        </header>
+        <section class="wrapper style1 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Request Detailed Report</h2>
+                </header>
+            </div>
+        </section>
+        <section class="wrapper style2">
+            <div class="inner form-box">
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+                <form action="https://formsubmit.co/umarobotics7@gmail.com" method="POST" target="hidden_iframe" onsubmit="return handleSubmit()">
+                    <input type="hidden" id="hidden_salary" name="salary">
+                    <input type="hidden" id="hidden_shifts" name="shifts">
+                    <input type="hidden" id="hidden_workers" name="workers">
+                    <input type="hidden" id="hidden_savings" name="savings">
+                    <input type="hidden" id="hidden_payback" name="payback">
+
+                    <div class="row gtr-uniform">
+                        <div class="col-12"><label>Your Email</label><input type="email" name="email" required></div>
+                        <div class="col-12"><label>Company Name</label><input type="text" name="company" id="company_field" required></div>
+                        <div class="col-12"><label>Message (optional)</label><textarea name="message" rows="4"></textarea></div>
+                    </div>
+                    <ul class="actions" style="margin-top:2rem;">
+                        <li><button type="submit" class="button primary">Submit Request</button></li>
+                    </ul>
+                </form>
+                <p id="successMessage">✅ Request sent! PDF downloading...</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("hidden_salary").value = params.get('salary') || "0";
+            document.getElementById("hidden_shifts").value = params.get('shifts') || "0";
+            document.getElementById("hidden_workers").value = params.get('workers') || "0";
+            document.getElementById("hidden_savings").value = params.get('savings') || "0";
+            document.getElementById("hidden_payback").value = params.get('payback') || "0";
+        };
+
+        function handleSubmit() {
+            generatePDF();
+            document.getElementById("successMessage").style.display = "block";
+            return true;
+        }
+
+        function generatePDF() {
+            const {
+                jsPDF
+            } = window.jspdf;
+            const doc = new jsPDF();
+
+            const company = document.getElementById("company_field").value || "Client";
+            const salary = document.getElementById("hidden_salary").value;
+            const shifts = document.getElementById("hidden_shifts").value;
+            const workers = document.getElementById("hidden_workers").value;
+            const savings = document.getElementById("hidden_savings").value;
+            const payback = document.getElementById("hidden_payback").value;
+
+            // Header Section
+            doc.setFillColor(29, 36, 42);
+            doc.rect(0, 0, 210, 40, 'F');
+            doc.setFontSize(22);
+            doc.setTextColor(0, 188, 212); // UMA Teal
+            doc.text("UMA ROBOTICS", 20, 20);
+            doc.setFontSize(10);
+            doc.setTextColor(255, 255, 255);
+            doc.text("Efficiency & Automation Analysis Report", 20, 28);
+
+            // Client Info
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(12);
+            doc.setFont(undefined, 'bold');
+            doc.text(`Company: ${company}`, 20, 55);
+            doc.setFont(undefined, 'normal');
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 150, 55);
+
+            // 1. EXECUTIVE SUMMARY (Parameters)
+            doc.setDrawColor(0, 188, 212);
+            doc.setLineWidth(0.5);
+            doc.line(20, 60, 190, 60);
+
+            doc.setFontSize(14);
+            doc.text("Operational Parameters", 20, 70);
+            doc.setFontSize(11);
+            doc.text(`- Worker Monthly Salary: INR ${salary}`, 25, 78);
+            doc.text(`- Number of Shifts: ${shifts}`, 25, 85);
+            doc.text(`- Workers per Shift: ${workers}`, 25, 92);
+
+            // 2. SAVINGS & PAYBACK
+            doc.setFontSize(14);
+            doc.text("Financial Projections", 20, 105);
+            doc.setFontSize(11);
+            doc.setTextColor(0, 188, 212);
+            doc.setFont(undefined, 'bold');
+            doc.text(`Estimated Annual Savings: ${savings}`, 25, 113);
+            doc.text(`Estimated Payback Period: ${payback}`, 25, 120);
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(0, 0, 0);
+
+            // 3. 5-YEAR PROJECTION TABLE
+            const sNum = parseFloat(salary.replace(/[^0-9.]/g, '')) || 0;
+            const shNum = parseFloat(shifts) || 0;
+            const wNum = parseFloat(workers) || 0;
+            const annualSavings = (sNum * shNum * wNum * 12) * 0.825; // 82.5% efficiency midpoint
+
+            let cumulative = 0;
+            const rows = [];
+            for (let i = 1; i <= 5; i++) {
+                cumulative += annualSavings;
+                rows.push([`Year ${i}`, `INR ${Math.round(annualSavings).toLocaleString()}`, `INR ${Math.round(cumulative).toLocaleString()}`]);
+            }
+
+            doc.autoTable({
+                startY: 130,
+                head: [
+                    ['Year', 'Annual Savings', 'Cumulative Savings']
+                ],
+                body: rows,
+                headStyles: {
+                    fillColor: [0, 188, 122],
+                    textColor: [0, 122, 188]
+                },
+                alternateRowStyles: {
+                    fillColor: [0, 188, 122]
+                }
+            });
+
+            // 4. RECOMMENDED SOLUTIONS
+            const finalY = doc.lastAutoTable.finalY + 15;
+            doc.setFontSize(14);
+            doc.text("Recommended Solutions", 20, finalY);
+
+            doc.setFontSize(10);
+            doc.setTextColor(0, 188, 212);
+            doc.textWithLink("AMR Tug", 25, finalY + 8, {
+                url: "https://umarobotics.com/content/products.html"
+            });
+            doc.setTextColor(0, 0, 0);
+            doc.text("- Ideal for automated towing of trolleys and carts.", 45, finalY + 8);
+
+            doc.setTextColor(0, 188, 212);
+            doc.textWithLink("Heavy Load Carrier", 25, finalY + 16, {
+                url: "https://umarobotics.com/content/products.html"
+            });
+            doc.setTextColor(0, 0, 0);
+            doc.text("- Designed for transporting pallets and high-capacity loads.", 65, finalY + 16);
+
+            doc.setTextColor(0, 188, 212);
+            doc.textWithLink("Follow Robot", 25, finalY + 24, {
+                url: "https://umarobotics.com/content/products.html"
+            });
+            doc.setTextColor(0, 0, 0);
+            doc.text("- Collaborative robot for warehouse picking and assistance.", 55, finalY + 24);
+
+            // Footer
+            doc.setFontSize(8);
+            doc.setTextColor(0, 0, 0);
+            doc.text("© UMA Robotics | umarobotics7@gmail.com | +91 9084088838", 105, 285, {
+                align: "center"
+            });
+
+            doc.save(`UMA_Report_${company}.pdf`);
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>UMA - Request Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        .form-box {
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        input,
+        textarea {
+            background: #1d242a !important;
+            color: #fff !important;
+            border: 1px solid #444 !important;
+        }
+        
+        #successMessage {
+            display: none;
+            color: #00bcd4;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <header id="header">
+            <h1><a href="../index.html">UMA</a></h1>
+        </header>
+        <section class="wrapper style1 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Request Detailed Report</h2>
+                </header>
+            </div>
+        </section>
+        <section class="wrapper style2">
+            <div class="inner form-box">
+                <form id="reportForm" action="https://formsubmit.co/umarobotics7@gmail.com" method="POST" onsubmit="return handleSubmit(event)">
+
+                    <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_template" value="table"> <input type="hidden" name="_subject" value="New ROI Report Request">
+
+                    <input type="hidden" id="hidden_salary" name="Worker_Salary">
+                    <input type="hidden" id="hidden_shifts" name="Number_of_Shifts">
+                    <input type="hidden" id="hidden_workers" name="Workers_per_Shift">
+                    <input type="hidden" id="hidden_savings" name="Annual_Savings">
+                    <input type="hidden" id="hidden_payback" name="Payback_Period">
+
+                    <div class="row gtr-uniform">
+                        <div class="col-12"><label>Your Email</label><input type="email" name="email" required></div>
+                        <div class="col-12"><label>Company Name</label><input type="text" name="company" id="company_field" required></div>
+                        <div class="col-12"><label>Message (optional)</label><textarea name="message" rows="4"></textarea></div>
+                    </div>
+                    <ul class="actions" style="margin-top:2rem;">
+                        <li><button type="submit" id="submitBtn" class="button primary">Submit Request</button></li>
+                    </ul>
+                </form>
+                <p id="successMessage">✅ Request sent! PDF downloading...</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("hidden_salary").value = params.get('salary') || "0";
+            document.getElementById("hidden_shifts").value = params.get('shifts') || "0";
+            document.getElementById("hidden_workers").value = params.get('workers') || "0";
+            document.getElementById("hidden_savings").value = params.get('savings') || "0";
+            document.getElementById("hidden_payback").value = params.get('payback') || "0";
+        };
+
+        function handleSubmit(event) {
+            // 1. Generate the PDF immediately
+            generatePDF();
+
+            // 2. Show success message
+            document.getElementById("successMessage").style.display = "block";
+            document.getElementById("submitBtn").disabled = true;
+            document.getElementById("submitBtn").innerText = "Sending...";
+
+            // 3. Let the form submit normally to FormSubmit
+            // The return true allows the browser to POST the data
+            return true;
+        }
+
+        function generatePDF() {
+            const {
+                jsPDF
+            } = window.jspdf;
+            const doc = new jsPDF();
+
+            const company = document.getElementById("company_field").value || "Client";
+            const salary = document.getElementById("hidden_salary").value;
+            const shifts = document.getElementById("hidden_shifts").value;
+            const workers = document.getElementById("hidden_workers").value;
+            const savings = document.getElementById("hidden_savings").value;
+            const payback = document.getElementById("hidden_payback").value;
+
+            // Header Section
+            doc.setFillColor(29, 36, 42);
+            doc.rect(0, 0, 210, 40, 'F');
+            doc.setFontSize(22);
+            doc.setTextColor(0, 188, 212);
+            doc.text("UMA ROBOTICS", 20, 20);
+            doc.setFontSize(10);
+            doc.setTextColor(255, 255, 255);
+            doc.text("Efficiency & Automation Analysis Report", 20, 28);
+
+            // Client Info
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(12);
+            doc.setFont(undefined, 'bold');
+            doc.text(`Company: ${company}`, 20, 55);
+            doc.setFont(undefined, 'normal');
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 150, 55);
+
+            // 1. Parameters
+            doc.setDrawColor(0, 188, 212);
+            doc.setLineWidth(0.5);
+            doc.line(20, 60, 190, 60);
+
+            doc.setFontSize(14);
+            doc.text("Operational Parameters", 20, 70);
+            doc.setFontSize(11);
+            doc.text(`- Worker Monthly Salary: INR ${salary}`, 25, 78);
+            doc.text(`- Number of Shifts: ${shifts}`, 25, 85);
+            doc.text(`- Workers per Shift: ${workers}`, 25, 92);
+
+            // 2. Projections
+            doc.setFontSize(14);
+            doc.text("Financial Projections", 20, 105);
+            doc.setFontSize(11);
+            doc.setTextColor(0, 188, 212);
+            doc.setFont(undefined, 'bold');
+            doc.text(`Estimated Annual Savings: ${savings}`, 25, 113);
+            doc.text(`Estimated Payback Period: ${payback}`, 25, 120);
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(0, 0, 0);
+
+            // 3. Table
+            const sNum = parseFloat(salary.replace(/[^0-9.]/g, '')) || 0;
+            const shNum = parseFloat(shifts) || 0;
+            const wNum = parseFloat(workers) || 0;
+            const annualSavings = (sNum * shNum * wNum * 12) * 0.825;
+
+            let cumulative = 0;
+            const rows = [];
+            for (let i = 1; i <= 5; i++) {
+                cumulative += annualSavings;
+                rows.push([`Year ${i}`, `INR ${Math.round(annualSavings).toLocaleString()}`, `INR ${Math.round(cumulative).toLocaleString()}`]);
+            }
+
+            doc.autoTable({
+                startY: 130,
+                head: [
+                    ['Year', 'Annual Savings', 'Cumulative Savings']
+                ],
+                body: rows,
+                headStyles: {
+                    fillColor: [0.188, 122],
+                    textColor: [0.188, 129]
+                },
+                alternateRowStyles: {
+                    fillColor: [0.188, 122]
+                }
+            });
+
+            // 4. Products
+            const finalY = doc.lastAutoTable.finalY + 15;
+            doc.setFontSize(14);
+            doc.text("Recommended Solutions", 20, finalY);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 188, 212);
+            doc.textWithLink("AMR Tug", 25, finalY + 8, {
+                url: "https://umarobotics.com/content/products.html"
+            });
+            doc.setTextColor(0, 0, 0);
+            doc.text("- Ideal for automated towing of trolleys and carts.", 45, finalY + 8);
+
+            // Footer
+            doc.setFontSize(8);
+            doc.setTextColor(0, 0, 0);
+            doc.text("© UMA Robotics | umarobotics7@gmail.com | +91 9084088838", 105, 285, {
+                align: "center"
+            });
+
+            doc.save(`UMA_Report_${company}.pdf`);
+        }
+    </script>
+</body>
+
+</html> -->
